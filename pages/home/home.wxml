@@ -1,0 +1,19 @@
+<!--pages/home/home.wxml-->
+<view>
+  <!-- 轮播图 -->
+ <swiper indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" indicator-active-color="rgba(0, 0, 0, .4)" indicator-color="rgba(0, 0, 0, .1)">
+        <block wx:for="{{slideImgs}}">
+          <swiper-item>
+            <image class='iv_slide' src="{{item.url}}"/>
+          </swiper-item>
+        </block>
+  </swiper>
+  <!-- 功能网格 -->
+  <view class='grid_func'>
+    <view class='func_item' bindtap='btnClickFuncItem' wx:for="{{funcs}}" data-item="{{item}}" >
+      <image class='iv_func' src="{{item.icon}}"/>
+      <text class='tv_func'>{{item.name}}</text>
+    </view>
+  </view>
+</view>
+

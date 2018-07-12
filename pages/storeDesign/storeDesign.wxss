@@ -1,0 +1,22 @@
+/* pages/storeDesign/storeDesign.wxss */
+.view_bg {
+  height: 150px;
+  width: 100%;
+}
+
+.view_bg_no {
+  height: 150px;
+  border: 1px solid #aaa;
+}
+
+.iv_edit {
+  width: 28px;
+  height: 28px;
+  margin: 4px;
+  padding: 4px;
+}
+
+.iv_edit_bg {
+  position: absolute;
+  right: 0px;
+}
