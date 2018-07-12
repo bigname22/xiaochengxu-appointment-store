@@ -1,5 +1,5 @@
 <!--pages/storeDesign/storeDesign.wxml-->
-<view>
+<view class='view_parent'>
   <!-- 背景图-->
   <view class='view_bg'>
     <view class='view_bg_no' wx:if="{{bgImgs.length == 0}}">
@@ -10,8 +10,12 @@
     </view>
   </view>
   <!-- logo -->
-  <view>
-    <view wx:if="{{logoImg.length == 0}}"></view>
+  <view class='view_logo'>
+    <view class='view_logo_no' wx:if="{{logoImg.length == 0}}">
+      <!--logo圆圈-->
+      <image class='view_logo_circle'/>
+      <image class='iv_edit iv_edit_logo' src='{{editIcon}}'/>
+    </view>
     <view wx:else>
       
     </view>

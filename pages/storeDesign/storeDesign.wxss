@@ -1,12 +1,18 @@
 /* pages/storeDesign/storeDesign.wxss */
+.view_parent {
+  margin: 22px 16px;
+}
+
 .view_bg {
   height: 150px;
   width: 100%;
+  z-index: 1;
 }
 
 .view_bg_no {
   height: 150px;
   border: 1px solid #aaa;
+  text-align: right
 }
 
 .iv_edit {
@@ -17,6 +23,32 @@
 }
 
 .iv_edit_bg {
-  position: absolute;
-  right: 0px;
+}
+
+.view_logo {
+  position: relative;
+  top: -39px;
+  z-index: 2;
+  height: 78px;
+  line-height: 78px;
+  text-align: center
+}
+
+.view_logo_no {
+  height: 78px;
+  line-height: 78px;
+  text-align: center
+}
+
+.view_logo_circle {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  background: white
+}
+
+.iv_edit_logo {
+  position: relative;
+  left: -28px;
 }
