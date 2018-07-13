@@ -1,16 +1,19 @@
 /* pages/storeDesign/storeDesign.wxss */
 .view_parent {
-  margin: 22px 16px;
+  margin: 5vh 32px;
+  border: 1px solid #aaa;
+  height:90vh;
+  /* background-image: url('/assets/img/ic_phone_bg.svg'); */
 }
 
 .view_bg {
-  height: 150px;
+  height: 120px;
   width: 100%;
   z-index: 1;
 }
 
 .view_bg_no {
-  height: 150px;
+  height: 120px;
   border: 1px solid #aaa;
   text-align: right
 }
@@ -45,10 +48,60 @@
   height: 78px;
   border-radius: 50%;
   border: 1px solid #aaa;
-  background: white
+  background: white;
+  display: inline-block;
+  line-height: 78px;
+  text-align: end;
 }
 
 .iv_edit_logo {
-  position: relative;
-  left: -28px;
+
+}
+
+.view_store_name {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  margin-top: -39px;
+}
+
+.view_store_name_no {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tv_store_name {
+  color: #aaa;
+}
+
+.view_bottom {
+  margin-top: 168px;
+  width: 100%;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #FBA99D;
+}
+
+.view_goods_func_name {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tv_func_name {
+  color: white;
+}
+
+.input {
+  width: 78px;
 }

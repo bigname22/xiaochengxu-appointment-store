@@ -13,20 +13,39 @@
   <view class='view_logo'>
     <view class='view_logo_no' wx:if="{{logoImg.length == 0}}">
       <!--logo圆圈-->
-      <image class='view_logo_circle'/>
-      <image class='iv_edit iv_edit_logo' src='{{editIcon}}'/>
+      <view class='view_logo_circle'>
+        <image class='iv_edit iv_edit_logo' src='{{editIcon}}'/>
+      </view>
     </view>
     <view wx:else>
       
     </view>
   </view>
   <!-- 店名 -->
-  <view>
-    <view wx:if="{{storeName.length == 0}}"></view>
+  <view class='view_store_name'>
+    <view wx:if="{{storeName.length == 0}}">
+      <view class='view_store_name_no'>
+        <!-- <view class='tv_store_name'>店名</view>
+        <image class='iv_edit iv_edit_store_name' src='{{editIcon}}'/> -->
+        <input class='input' placeholder="我的预约"/>
+        <image class='iv_edit iv_edit_store_name' src='{{editIcon}}'/>
+      </view>
+    </view>
     <view wx:else>
       
     </view>
   </view>
-  <!-- 商品列表 -->
-  <!-- 我的预约 -->
+  <view class='view_bottom'>
+    <!-- 商品列表 -->
+    <view class='view_goods_func_name'>
+        <input class='input' placeholder="商品列表"/>
+        <image class='iv_edit' src='{{editIcon}}'/>
+    </view>
+    <!-- 我的预约 -->
+    <view class='view_goods_func_name'>
+        <input class='input' placeholder="我的预约"/>
+        <image class='iv_edit' src='{{editIcon}}'/>
+    </view>
+
+  </view>
 </view>
