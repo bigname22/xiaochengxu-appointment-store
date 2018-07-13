@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.1.1",
 	"appid": "wx39b4c5285b26082b",
-	"projectname": "%E9%A2%84%E7%BA%A6-%E5%95%86%E9%93%BA%E7%89%88",
+	"projectname": "xiaochengxu-appointment-store",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

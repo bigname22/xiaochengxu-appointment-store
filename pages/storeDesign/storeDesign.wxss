@@ -1,10 +1,12 @@
 /* pages/storeDesign/storeDesign.wxss */
 .view_parent {
-  margin: 5vh 32px;
-  border: 1px solid #aaa;
+  margin: 8px 32px 5vh 32px;
+  border: 5px solid #000;
   height:90vh;
-  /* background-image: url('/assets/img/ic_phone_bg.svg'); */
+  position: relative;
+  border-radius: 8px;
 }
+
 
 .view_bg {
   height: 120px;
@@ -80,7 +82,8 @@
 }
 
 .view_bottom {
-  margin-top: 168px;
+  position: absolute;
+  bottom: 48px;
   width: 100%;
   height: 68px;
   display: flex;
@@ -88,6 +91,7 @@
   justify-content: space-around;
   background-color: #FBA99D;
 }
+
 
 .view_goods_func_name {
   width: 100%;
@@ -104,4 +108,36 @@
 
 .input {
   width: 78px;
+}
+
+
+.view_bottom_border {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  border-top: 5px solid #000;
+  align-items: center;
+  justify-content: center;  
+}
+
+.view_circle {
+  width: 58px;
+  height: 32px;
+  background-color: #aaa;
+  border-radius: 16px;
+}
+
+.funcs {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tv_func {
+  color: blue;
+  margin: 0px 5vh;
 }

@@ -1,9 +1,13 @@
 <!--pages/storeDesign/storeDesign.wxml-->
+<view class='funcs'>
+  <text class='tv_func'>模板</text>
+  <text class='tv_func'>保存</text>
+</view>
 <view class='view_parent'>
   <!-- 背景图-->
   <view class='view_bg'>
     <view class='view_bg_no' wx:if="{{bgImgs.length == 0}}">
-      <image class='iv_edit iv_edit_bg' src='{{editIcon}}'/>
+      <image bindtap='btnClickEditBgImg' class='iv_edit iv_edit_bg' src='{{editIcon}}'/>
     </view>
     <view wx:else>
 
@@ -23,16 +27,9 @@
   </view>
   <!-- 店名 -->
   <view class='view_store_name'>
-    <view wx:if="{{storeName.length == 0}}">
-      <view class='view_store_name_no'>
-        <!-- <view class='tv_store_name'>店名</view>
-        <image class='iv_edit iv_edit_store_name' src='{{editIcon}}'/> -->
-        <input class='input' placeholder="我的预约"/>
-        <image class='iv_edit iv_edit_store_name' src='{{editIcon}}'/>
-      </view>
-    </view>
-    <view wx:else>
-      
+    <view class='view_goods_func_name'>
+        <input class='input' placeholder="店名"/>
+        <image class='iv_edit' src='{{editIcon}}'/>
     </view>
   </view>
   <view class='view_bottom'>
@@ -46,6 +43,10 @@
         <input class='input' placeholder="我的预约"/>
         <image class='iv_edit' src='{{editIcon}}'/>
     </view>
-
   </view>
+
+  <view class='view_bottom_border'>
+    <view class='view_circle'></view>
+  </view>
+
 </view>
