@@ -6,41 +6,48 @@
 <view class='view_parent'>
   <!-- 背景图-->
   <view class='view_bg'>
-    <view class='view_bg_no' wx:if="{{bgImgs.length == 0}}">
-      <image bindtap='btnClickEditBgImg' class='iv_edit iv_edit_bg' src='{{editIcon}}'/>
-    </view>
-    <view wx:else>
-
+    <image bindtap='btnClickEditBgImg' class='iv_edit iv_edit_bg bg_white' src='{{addIcon}}'/>
+    <image wx:if="{{bgImgs.length > 0}}" bindtap='btnClickDelectBgImg' class='iv_edit iv_delect_bg bg_white' src='/assets/img/ic_delect_box.svg'/> 
+    <view>
+      <swiper class='swiper_bg swiper-box' current="{{currentSliderBgIndex}}" vertical="{{false}}" indicator-dots="{{true}}" circular="{{true}}" indicator-active-color="rgba(225, 0, 0, 1)" indicator-color="rgba(0, 25, 0, 1)">
+        <view wx:for="{{bgImgs}}" bindtap='btnClickDelectBgImg' data-index="{{index}}" data-item="{{item}}">
+          <swiper-item>
+              <view>    
+                <image src='{{item}}' class="iv_bg"/>
+              </view>
+          </swiper-item>
+        </view>
+      </swiper>
     </view>
   </view>
   <!-- logo -->
-  <view class='view_logo'>
-    <view class='view_logo_no' wx:if="{{logoImg.length == 0}}">
+  <view class='view_logo' bindtap='btnClickEditLogoImg'>
+    <view class='view_logo_no'>
       <!--logo圆圈-->
       <view class='view_logo_circle'>
-        <image class='iv_edit iv_edit_logo' src='{{editIcon}}'/>
+        <view class='view_logo_edit'>
+          <image class='iv_edit' src='{{addIcon}}'/>
+        </view>
+        <image class='iv_logo' src='{{logoImg}}'/>
       </view>
-    </view>
-    <view wx:else>
-      
     </view>
   </view>
   <!-- 店名 -->
-  <view class='view_store_name'>
+  <view class='view_store_name' wx:if="{{0==0}}">
     <view class='view_goods_func_name'>
-        <input class='input' placeholder="店名"/>
+        <input class='input_store_name' value='{{storeName}}' placeholder="请输入店名" bindinput='listenerStoreNameInput'/>
         <image class='iv_edit' src='{{editIcon}}'/>
     </view>
   </view>
   <view class='view_bottom'>
     <!-- 商品列表 -->
     <view class='view_goods_func_name'>
-        <input class='input' placeholder="商品列表"/>
+        <input class='input' value='{{goodsFuncName}}' placeholder="商品列表" maxlength='5' bindinput='listenerGoodsFuncNameInput'/>
         <image class='iv_edit' src='{{editIcon}}'/>
     </view>
     <!-- 我的预约 -->
     <view class='view_goods_func_name'>
-        <input class='input' placeholder="我的预约"/>
+        <input class='input' value='{{appointmentsFuncName}}' placeholder="我的预约" maxlength='5' bindinput='listenerAppointmentFuncNameInput'/>
         <image class='iv_edit' src='{{editIcon}}'/>
     </view>
   </view>

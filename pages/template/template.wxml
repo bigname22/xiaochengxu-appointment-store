@@ -1,0 +1,9 @@
+<!--pages/template/template.wxml-->
+<view>
+  <view  class='view_store_type'>
+    <view wx:for='{{storeTypes}}'>
+      <text class="item_store_type {{item.active ? 'item_store_type_active': ''}}">{{item.name}}</text>
+    </view>
+  </view>
+  
+</view>

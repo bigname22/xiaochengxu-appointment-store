@@ -5,12 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bgImgs: [],
+    bgImgs: [
+    ],
+    currentSliderBgIndex: 0,
     logoImg: '',
-    storeName: '',
-    goodsFuncName: '',
-    appointmentsFuncName: '',
+    storeName: '欧莱雅美发店',
+    goodsFuncName: '理发师',
+    appointmentsFuncName: '我的预约',
     editIcon: '/assets/img/ic_edit.svg',
+    addIcon: '/assets/img/ic_add.svg',
   },
 
   /**
@@ -71,14 +74,64 @@ Page({
 
   // 点击事件
   btnClickEditBgImg: function () {
+    let _this = this;
     wx.chooseImage({
-      count: 9, // 默认9
+      count: 5, // 最多可选5张
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: function (res) {
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-        let tempFilePaths = res.tempFilePaths
+        let tempFilePaths = res.tempFilePaths;
+        _this.setData({
+          bgImgs: tempFilePaths
+        })
       }
     })
-  }
+  },
+
+  btnClickDelectBgImg: function () {
+    this.data.bgImgs.splice(this.data.currentSliderBgIndex, 1);
+    this.data.currentSliderBgIndex -= 1;
+    this.setData({
+      bgImgs: this.data.bgImgs
+    })
+  },
+
+  btnClickEditLogoImg: function () {
+    let _this = this;
+    wx.chooseImage({
+      count: 1, // 最多可选5张
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        let tempFilePaths = res.tempFilePaths;
+        if (tempFilePaths && tempFilePaths.length > 0) {
+          _this.setData({
+            logoImg: tempFilePaths[0]
+          })
+        }
+      }
+    })
+  },
+
+  listenerStoreNameInput: function (e) {
+    this.setData({
+      storeName: e.detail.value
+    })
+  },
+
+  listenerGoodsFuncNameInput: function (e) {
+    this.setData({
+      goodsFuncName: e.detail.value
+    })
+  },
+
+  listenerAppointmentFuncNameInput: function (e) {
+    this.setData({
+      appointmentsFuncName: e.detail.value
+    })
+  },
+
+  
 })

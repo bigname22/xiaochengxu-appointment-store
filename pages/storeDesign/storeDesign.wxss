@@ -11,23 +11,32 @@
 .view_bg {
   height: 120px;
   width: 100%;
-  z-index: 1;
+  border: 1px solid #aaa;
 }
 
-.view_bg_no {
-  height: 120px;
-  border: 1px solid #aaa;
-  text-align: right
-}
 
 .iv_edit {
-  width: 28px;
-  height: 28px;
-  margin: 4px;
+  width: 22px;
+  height: 22px;
   padding: 4px;
+  margin: 4px;
+  z-index: 999;
+  border-radius: 50%;
+  
+}
+
+.bg_white {
+  background-color: white;
 }
 
 .iv_edit_bg {
+  position: absolute;
+  right: 0px;
+}
+
+.iv_delect_bg {
+  position: absolute;
+  right: 36px;
 }
 
 .view_logo {
@@ -53,11 +62,27 @@
   background: white;
   display: inline-block;
   line-height: 78px;
-  text-align: end;
+  position: relative;
 }
 
-.iv_edit_logo {
+.view_logo_edit {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+
+
+.iv_logo {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  left: 0px;
 }
 
 .view_store_name {
@@ -110,6 +135,10 @@
   width: 78px;
 }
 
+.input_store_name {
+  max-width: 128px;
+}
+
 
 .view_bottom_border {
   position: absolute;
@@ -141,3 +170,38 @@
   color: blue;
   margin: 0px 5vh;
 }
+
+.swiper_bg {
+  height: 120px !important;
+  position: relative;
+}
+
+.iv_bg {
+  height: 120px;
+  width: 100%;
+}
+
+input {
+  border-bottom: 1px solid #aaa;
+}
+
+/* 指示点样式 */
+.wx-swiper-dots-horizontal{
+  top: 8px;
+}   
+/* .swiper-box .wx-swiper-dot{
+    width:40rpx;
+    display: inline-flex;
+    height: 10rpx; 
+    margin-left: 20rpx;
+    justify-content:space-between;
+} */
+/* .swiper-box .wx-swiper-dot::before{
+    content: '';
+    flex-grow: 1;  
+    background: rgba(255,255,255,0.8);
+    border-radius: 8rpx
+}
+.swiper-box .wx-swiper-dot-active::before{
+    background:rgba(244,0,0,0.8);    
+} */

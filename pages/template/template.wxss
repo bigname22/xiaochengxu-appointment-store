@@ -1,0 +1,19 @@
+/* pages/template/template.wxss */
+.view_store_type {
+  display: flex;
+}
+
+.item_store_type {
+  height: 22px;
+  font-size: 16px;
+  background-color: #ccc;
+  border-radius: 13px;
+  padding: 4px 8px;
+  color: white;
+  margin: 4px 8px;
+}
+
+.item_store_type_active {
+  color: black;
+  background-color: blue;
+}
